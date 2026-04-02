@@ -1,13 +1,11 @@
 import React from 'react';
+import NavBar from './components/NavBar';
 
 const App = () => {
     return (
-        <div>
-            <h1 className="text-3xl font-bold underline text-indigo-700">
-                Welcome to the MacBook Graph App!
-            </h1>
-            {/* Add your graph components and logic here */}
-        </div>
+        <main>
+            <NavBar />
+        </main>
     );
 }
 export default App;
