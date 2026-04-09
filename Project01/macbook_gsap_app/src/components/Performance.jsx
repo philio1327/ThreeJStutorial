@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
-import { performanceImages, performanceImgPositions } from "../constants/index.js";
+import { performanceImages, performanceImgPositions } from "../constants";
 import { useMediaQuery } from "react-responsive";
 
 const Performance = () => {
@@ -48,8 +48,8 @@ const Performance = () => {
             performanceImgPositions.forEach((item) => {
                 if(item.id === "p5") return;
 
-                const selector = `${item.id}`;
-                const toVars = {}; // Final state: in place and visible
+                const selector = `.${item.id}`;
+                const toVars = {}; 
                 if (typeof item.left === "number") toVars.left = `${item.left}%`;
                 if (typeof item.right === "number") toVars.right = `${item.right}%`;
                 if (typeof item.bottom === "number") toVars.bottom = `${item.bottom}%`;
