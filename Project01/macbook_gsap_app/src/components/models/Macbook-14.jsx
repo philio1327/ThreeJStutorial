@@ -14,8 +14,9 @@ import useMacbookStore from '../../store';
 import { noChangeParts } from '../../constants';
 import { Color, SRGBColorSpace } from 'three';
 
+const base = import.meta.env.BASE_URL;
+
 export default function MacbookModel14(props) {
-  const base = import.meta.env.BASE_URL;
   const { color } = useMacbookStore();
   const { nodes, materials, scene } = useGLTF(`${base}models/macbook-14-transformed.glb`);
 

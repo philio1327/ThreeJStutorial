@@ -15,9 +15,10 @@ import { useEffect } from 'react';
 import { noChangeParts } from '../../constants';
 import { Color } from 'three';
 
+  const base = import.meta.env.BASE_URL;
+  
 export default function MacbookModel(props) {
   const { color, texture } = useMacbookStore();
-  const base = import.meta.env.BASE_URL;
   const { nodes, materials, scene } = useGLTF(`${base}models/macbook-transformed.glb`);
 
   const screen = useVideoTexture(texture);
