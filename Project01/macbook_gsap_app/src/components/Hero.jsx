@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 
 const Hero = () => {
     const videoRef = useRef();
+    const base = import.meta.env.BASE_URL;
 
     useEffect(() => {
         if (videoRef.current) videoRef.current.playbackRate = 1.5;
@@ -11,10 +12,10 @@ const Hero = () => {
         <section id="hero">
             <div>
                 <h1>MacBook Pro</h1>
-                <img src="/title.png" alt="MacBook Title" />
+                <img src={`${base}title.png`} alt="MacBook Title" />
             </div>
 
-            <video ref={videoRef} src="/videos/hero.mp4" autoPlay muted playsInline />
+            <video ref={videoRef} src={`${base}videos/hero.mp4`} autoPlay muted playsInline />
 
             <button>Buy</button>
 
