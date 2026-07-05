@@ -13,10 +13,11 @@ import { useGLTF, useTexture } from '@react-three/drei'
 import useMacbookStore from '../../store';
 import { noChangeParts } from '../../constants';
 import { Color, SRGBColorSpace } from 'three';
+import macbookModel14 from '../models/macbook-14-transformed.glb';
 
 export default function MacbookModel14(props) {
   const { color } = useMacbookStore();
-  const { nodes, materials, scene } = useGLTF('/models/macbook-14-transformed.glb');
+  const { nodes, materials, scene } = useGLTF(macbookModel14);
 
   const texture = useTexture('/screen.png');
   texture.colorSpace = SRGBColorSpace;
@@ -60,4 +61,4 @@ export default function MacbookModel14(props) {
   )
 }
 
-useGLTF.preload('/models/macbook-14-transformed.glb')
+useGLTF.preload(macbookModel14);
