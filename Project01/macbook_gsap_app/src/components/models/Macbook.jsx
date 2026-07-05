@@ -14,7 +14,6 @@ import useMacbookStore from '../../store';
 import { useEffect } from 'react';
 import { noChangeParts } from '../../constants';
 import { Color } from 'three';
-import macbookModel from '../models/macbook-transformed.glb';
 
 export default function MacbookModel(props) {
   const { color, texture } = useMacbookStore();
