@@ -1,10 +1,11 @@
 import { footerLinks } from "../constants";
 const Footer = () => {
+    const base = import.meta.env.BASE_URL;
     return (
         <footer>
             <div className="info">
                 <p>More ways to shop: Find an Apple Store or other retailer near you. Or call 1-800-MY-APPLE</p>
-                <img src="/logo.svg" alt="Apple Logo" />
+                <img src={`${base}logo.svg`} alt="Apple Logo" />
             </div>
 
             <hr />
