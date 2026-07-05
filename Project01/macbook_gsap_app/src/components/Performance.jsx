@@ -7,6 +7,7 @@ import { useMediaQuery } from "react-responsive";
 const Performance = () => {
     const isMobile = useMediaQuery({ query: "(max-width: 1024px)" });
     const sectionRef = useRef(null);
+    const base = import.meta.env.BASE_URL;
 
     useGSAP(
         () => {
